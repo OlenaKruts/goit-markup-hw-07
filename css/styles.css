@@ -93,15 +93,9 @@ body {
 }
 
 .container {
-  /* margin: 0 auto;*/
-  /*------mobile----*/
-  /*max-width: 1158px;*/
-  /*padding: 0 15px;*/
-
   padding-right: 15px;
   padding-left: 15px;
   height: 100%;
-  /*------/mobile/----*/
 }
 
 .section {
@@ -121,6 +115,8 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--cornflower);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .main-page {
   display: flex;
@@ -160,8 +156,8 @@ img {
 
   width: 24px;
   height: 24px;
-  right: 0;
-  top: 0;
+  right: 24px;
+  top: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
@@ -351,69 +347,24 @@ img {
 /*============/HERO/===============*/
 
 /*========OUR FEATURES=============*/
-/*.section-features {
-  padding-bottom: 0;
-}*/
 
 .features-set {
   display: flex;
-  /*----mobile--------*/
   flex-wrap: wrap;
   gap: 72px;
-  /*----/mobile/--------*/
 }
 
-.features-list {
-  /*----mobile--------*/
-  /*flex-basis: calc((100% - 72px) / 4);*/
-
-  /*----/mobile/--------*/
-}
-/*----mobile--------*/
-
-.features-icon {
-  /* display: none;*/
-  /*display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 112px;
-  margin-bottom: 8px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-
-  border-radius: 4px;
-  background: var(--cloud);
-
-  fill: var(--navy-blue);*/
-  /*----/mobile/--------*/
-}
 .features-name {
-  /*----/mobile/--------*/
-  /*  font-size: 20px;
-  line-height: 1.2;
-  font-weight: 500;*/
+  text-align: center;
   margin-bottom: 8px;
-  color: var(--navy-blue);
 
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
 
-  text-align: center;
-  /* text-transform: capitalize;*/
+  color: var(--navy-blue);
 }
-/*.features-text {
-  font-weight: 500;
-}
-*/
-/*----mobile--------*/
-/*.features-list:not(:last-child) {
-  margin-right: 24px;
-}
-*/
-/*----/mobile/--------*/
+
 /*======/OUR FEATURES/== ===========*/
 
 /*======WHAT ARE WE DOING=============*/
@@ -434,7 +385,7 @@ img {
   margin-right: 24px;
 }
 
-/*======OUR TEAM=============*/
+/*===========OUR TEAM================*/
 
 .container-mini {
   max-width: 260px;
@@ -469,10 +420,6 @@ img {
   background: var(--font-hero-clr);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-.team-list:not(:last-child) {
-  /*margin-bottom: 72px;*/
 }
 
 .team-name {
@@ -531,8 +478,6 @@ img {
 
 .container-footer-logo {
   margin-bottom: 72px;
-  /*display: block;
- text-align: center;*/
 }
 
 .logo-footer {
@@ -709,22 +654,27 @@ img {
 /*==============PORTOFOLIO=============*/
 
 .page-ptf {
-  padding-top: 96px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 /*---------------MENU-FILTR-----------*/
 
 .filter-menu {
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
+  flex-wrap: wrap;
 
-  margin-bottom: 72px;
+  margin-bottom: 48px;
 }
 
 .filter-button:not(:last-child) {
   margin-right: 24px;
 }
 
+/*.filter-button {
+  margin-right: 24px;
+}*/
 .filter-btn {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -744,7 +694,6 @@ img {
   background-color: var(--cloud);
 
   cursor: pointer;
-
   transition: color 250ms var(--cubik), background-color 250ms var(--cubik),
     box-shadow 250ms var(--cubik), border-color 250ms var(--cubik);
 }
@@ -761,15 +710,7 @@ img {
 
 /*-----------------CARD-SET--------------*/
 
-.card-set {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
-}
-
 .foto-card {
-  flex-basis: calc((100% - 48px) / 3);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
   transition: box-shadow 250ms var(--cubik);
 }
@@ -857,7 +798,7 @@ img {
 .modal {
   position: absolute;
 
-  width: 408px;
+  max-width: 408px;
   min-height: 576px;
   left: 50%;
   top: 50%;
@@ -1077,8 +1018,9 @@ img {
 .modal-submit:focus {
   background-color: var(--ocean);
 }
-/*=========/MODAL/===================*/
+/*=======================/MODAL/========================*/
 
+/*------------------------MOBILE----------------------------*/
 @media screen and (min-width: 480px) {
   .container {
     max-width: 428px;
@@ -1102,9 +1044,10 @@ img {
     }
   }
 }
-/*----------------------------------------------------*/
+
+/*----------------------до 767 рх--------------------------*/
+
 @media screen and (max-width: 767px) {
-  /*==================TAB-HEADER=====================*/
   .main-page {
     justify-content: space-between;
   }
@@ -1115,6 +1058,7 @@ img {
   .menu-adress-set {
     display: none;
   }
+
   .logo-footer {
     text-align: center;
   }
@@ -1129,18 +1073,20 @@ img {
     margin-left: auto;
     margin-right: auto;
   }
-  /*==================/TAB-HEADER/=====================*/
+  .foto-card:not(:last-child) {
+    margin-bottom: 48px;
+  }
 }
+/*----------------------/до 767 рх/--------------------------*/
 
 /*-------------------------------TABLET----------------------------*/
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
   }
+  /*=====================TAB-HEADER=========================*/
   .page-header {
     display: flex;
-
-    /*margin-right: auto;*/
   }
   .header-button-menu-open {
     display: none;
@@ -1151,20 +1097,6 @@ img {
   .main-page {
     justify-content: space-between;
   }
-  /*
-.logo-header,
-.menu-studio,
-.menu-prt,
-.menu-cnts,
-.menu-email,
-.menu-tel {
-  display: block;
-
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
-*/
   .menu-nav {
     display: flex;
     align-items: center;
@@ -1226,6 +1158,7 @@ img {
     border-radius: 2px;
     background-color: var(--ocean);
   }
+  /*=================/TAB-HEADER/======================*/
   /*=================TAB-HERO=======================*/
   .hero {
     max-width: 1440px;
@@ -1245,7 +1178,6 @@ img {
       background-image: url("../images/hero/Dark-bg-deck-2x.jpg");
     }
   }
-
   .main-title {
     max-width: 496px;
 
@@ -1265,7 +1197,6 @@ img {
     column-gap: 24px;
     row-gap: 72px;
   }
-
   .features-name {
     text-align: left;
   }
@@ -1300,11 +1231,32 @@ img {
   }
 
   /*=====================/TAB-FOOTER/==========================*/
+  /*=====================TAB-PORTOFOLIO=============*/
+  .filter-menu {
+    justify-content: center;
+    margin-bottom: 64px;
+  }
+
+  /*.filter-button:not(:last-child) {
+    margin-right: 24px;
+  }
+    */
+  .card-set {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  .foto-card {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  /*=====================/TAB-PORTOFOLIO/=============*/
 }
 
-/*-------------------------------------------------------*/
+/*-------------------------до 1199рх------------------------------*/
 
-@media screen and (min-width: 260px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   /*=================/OUR FEATURES/=======================*/
   .features-icon {
     display: none;
@@ -1321,7 +1273,7 @@ img {
     display: none;
   }
 }
-/*-----------------------------------------------------------*/
+/*------------------от 768рх до 1199рх---------------------*/
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   /*=================/HEADER/=======================*/
@@ -1345,11 +1297,15 @@ img {
     column-gap: 24px;
     row-gap: 72px;
   }
-
   .customers-item {
     flex-basis: calc((100% - 48px) / 3);
   }
   /*=================/CUSTOMERS/=======================*/
+  /*================FOOTER======================*/
+  .section-footer {
+    padding-left: 108px;
+  }
+  /*================/FOOTER/======================*/
 }
 
 /*---------------------------DECKTOP------------------------*/
@@ -1362,27 +1318,21 @@ img {
     padding-top: 120px;
     padding-bottom: 120px;
   }
-
+  /*=======================DECK-HEADER======================*/
   .logotype {
     line-height: 1.33;
   }
-
-  /*.menu-adress-set {
-    display: flex;
-  }*/
-
   .menu-adress {
     display: flex;
     align-items: center;
     column-gap: 40px;
   }
-
-  /*=================DECK-HERO=======================*/
+  /*=======================/DECK-HEADER/======================*/
+  /*======================DECK-HERO=========================*/
   .hero {
     padding-top: 188px;
     padding-bottom: 188px;
   }
-
   .main-title {
     margin-bottom: 48px;
   }
@@ -1422,7 +1372,6 @@ img {
     column-gap: 24px;
     row-gap: 72px;
   }
-
   .customers-item {
     flex-basis: calc((100% - 120px) / 6);
   }
@@ -1446,4 +1395,15 @@ img {
     margin-right: 24px;
   }
   /*=================/DECK-FOOTER/=======================*/
+  /*=====================DEC-PORTOFOLIO=============*/
+  .filter-menu {
+    margin-bottom: 72px;
+  }
+  .card-set {
+    row-gap: 48px;
+  }
+  .foto-card {
+    flex-basis: calc((100% - 48px) / 3);
+  }
+  /*=====================/DEC-PORTOFOLIO/=============*/
 }
