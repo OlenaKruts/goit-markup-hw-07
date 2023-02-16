@@ -1395,6 +1395,9 @@ img {
   .customers-item {
     flex-basis: calc((100% - 120px) / 6);
   }
+  .container-customers {
+    width: 100%;
+  }
   /*=================/DECK-CUSTOMERS/=======================*/
   /*=================DECK-FOOTER=======================*/
   .container-footer {
