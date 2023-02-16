@@ -121,7 +121,9 @@ img {
 .main-page {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
+
 .header-button-menu-open {
   background-color: transparent;
   border: none;
@@ -352,7 +354,11 @@ img {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero {
-    background-image: url("../images/hero/Dark-bg-mob-2x.jpg");
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/Dark-bg-mob-2x.jpg);
   }
 }
 /*============/HERO/===============*/
@@ -1045,18 +1051,17 @@ img {
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero {
-      background-image: url("../images/hero/Dark-bg-tab-2x.jpg");
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/Dark-bg-tab-2x.jpg);
     }
   }
 }
 
 /*----------------------до 767 рх--------------------------*/
-
 @media screen and (max-width: 767px) {
-  .main-page {
-    justify-content: space-between;
-  }
-
   .menu-nav {
     display: none;
   }
@@ -1064,16 +1069,19 @@ img {
     display: none;
   }
 
-  .logo-footer {
-    text-align: center;
-  }
-  .footer-input-email {
-    margin-bottom: 16px;
-  }
+  .logo-footer,
   .footer-soc-menu,
   .footer-text-subscribe {
     text-align: center;
   }
+}
+@media screen and (max-width: 767px) {
+  /*=====================FOOTER=========================*/
+
+  .footer-input-email {
+    margin-bottom: 16px;
+  }
+
   .footer-submit-subscribe {
     margin-left: auto;
     margin-right: auto;
@@ -1081,7 +1089,7 @@ img {
   .foto-card:not(:last-child) {
     margin-bottom: 48px;
   }
-  /*=====================FOOTER=========================*/
+
   .container-footer-soc {
     margin-bottom: 72px;
   }
@@ -1108,9 +1116,7 @@ img {
   .logo-header {
     margin-right: 123px;
   }
-  .main-page {
-    justify-content: space-between;
-  }
+
   .menu-nav {
     display: flex;
     align-items: center;
@@ -1191,7 +1197,11 @@ img {
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero {
-      background-image: url("../images/hero/Dark-bg-deck-2x.jpg");
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/Dark-bg-deck-2x.jpg);
     }
   }
   .main-title {
@@ -1252,10 +1262,6 @@ img {
     margin-bottom: 64px;
   }
 
-  /*.filter-button:not(:last-child) {
-    margin-right: 24px;
-  }
-    */
   .card-set {
     display: flex;
     flex-wrap: wrap;
@@ -1321,11 +1327,6 @@ img {
     flex-basis: calc((100% - 48px) / 3);
   }
   /*=================/CUSTOMERS/=======================*/
-  /*================FOOTER======================*/
-  /*.section-footer {
-    padding-left: 108px;
-  }*/
-  /*================/FOOTER/======================*/
 }
 
 /*---------------------------DECKTOP------------------------*/
