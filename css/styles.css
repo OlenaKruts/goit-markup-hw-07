@@ -35,9 +35,6 @@ ul {
 .list {
   list-style: none;
 }
-.link {
-  text-decoration: none;
-}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -48,6 +45,9 @@ body {
 
   color: var(--slate);
   background-color: var(--font-hero-clr);
+}
+.link {
+  text-decoration: none;
 }
 /*===========COMPONENTS===========*/
 
@@ -113,14 +113,14 @@ img {
 /*===========HEADER===========*/
 .header {
   padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--cornflower);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .main-page {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -418,7 +418,7 @@ img {
 }
 .team-set {
   display: flex;
-  row-gap: 24px;
+  row-gap: 72px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -674,17 +674,11 @@ img {
   display: flex;
   /*justify-content: center;*/
   flex-wrap: wrap;
-
+  column-gap: 24px;
+  row-gap: 16px;
   margin-bottom: 48px;
 }
 
-.filter-button:not(:last-child) {
-  margin-right: 24px;
-}
-
-/*.filter-button {
-  margin-right: 24px;
-}*/
 .filter-btn {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -1032,7 +1026,7 @@ img {
 /*=======================/MODAL/========================*/
 
 /*------------------------MOBILE----------------------------*/
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 428px) {
   .container {
     max-width: 428px;
     margin-left: auto;
@@ -1068,7 +1062,9 @@ img {
   .menu-adress-set {
     display: none;
   }
-
+  .main-page {
+    align-items: flex-start;
+  }
   .logo-footer,
   .footer-soc-menu,
   .footer-text-subscribe {
@@ -1094,9 +1090,6 @@ img {
     margin-bottom: 72px;
   }
   /*=====================FOOTER=========================*/
-  .filter-btn-all {
-    margin-bottom: 24px;
-  }
 }
 
 /*----------------------/до 767 рх/--------------------------*/
@@ -1107,6 +1100,9 @@ img {
     max-width: 768px;
   }
   /*=====================TAB-HEADER=========================*/
+  .mobile-menu {
+    display: none;
+  }
   .page-header {
     display: flex;
   }
@@ -1130,6 +1126,12 @@ img {
   }
   .menu-adress-set {
     align-self: baseline;
+  }
+  .menu-adress-item {
+    line-height: 1;
+  }
+  .menu-adress-item-email {
+    margin-bottom: 4px;
   }
   .menu-email,
   .menu-tel {
@@ -1173,7 +1175,7 @@ img {
     position: absolute;
 
     left: 0;
-    bottom: -27px;
+    bottom: -29px;
     width: 100%;
     height: 4px;
 
@@ -1257,6 +1259,10 @@ img {
 
   /*=====================/TAB-FOOTER/==========================*/
   /*=====================TAB-PORTOFOLIO=============*/
+  .page-ptf {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
   .filter-menu {
     justify-content: center;
     margin-bottom: 64px;
@@ -1348,6 +1354,9 @@ img {
     align-items: center;
     column-gap: 40px;
   }
+  .current::after {
+    bottom: -14px;
+  }
   /*=======================/DECK-HEADER/======================*/
   /*======================DECK-HERO=========================*/
   .hero {
@@ -1420,6 +1429,10 @@ img {
   }
   /*=================/DECK-FOOTER/=======================*/
   /*=====================DEC-PORTOFOLIO=============*/
+  .page-ptf {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
   .filter-menu {
     margin-bottom: 72px;
   }
